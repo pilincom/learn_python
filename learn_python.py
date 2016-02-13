@@ -541,7 +541,8 @@ print "Average grade:", grades_average(grades)
 print "Variance:", grades_variance(grades)
 print "Standard deviation:", grades_std_deviation(variance)
 """
- 
+
+print Hello world 
     
     
     
