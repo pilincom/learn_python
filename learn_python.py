@@ -83,9 +83,23 @@ middle = backpack[1:3]
 
 print first + middle
 
-#for loop
-for item in backpack:
-    print item
+#Prints everything starting at index 2 inclusive to index 9 exclusive with interval 2
+list = [1, 4, 9, 16, 25, 36, 49, 64, 81, 100]
+print list[2:9:2]
+
+
+#List comprehensions
+#Builds a list that include the squares of the even numbers between 1 to 11
+even_squares = [x ** 2 for x in range(1,12) if x % 2 == 0]
+print even_squares    
+
+#Builds a list that consist of the cubes of the numbers 1 through 10 only if the cube is evenly divisible by four.
+cubes_by_four = [x ** 3 for x in range(1,11) if (x ** 3) % 4 == 0]
+print cubes_by_four
+
+#Prints a list in areverse order (note negative stride)
+list = [1,2,3,4,5]
+print list[::-1]    
 """
 
 ##################
@@ -542,11 +556,22 @@ print "Variance:", grades_variance(grades)
 print "Standard deviation:", grades_std_deviation(variance)
 """
 
-    
-    
-    
-    
-    
+############
+###Lambda###
+############ 
+#Quick anonymous function that doesn't require a definition
+"""
+#Filters list languages to display only 'Python'
+languages = ["HTML", "JavaScript", "Python", "Ruby"]
+print filter(lambda x: x == 'Python', languages)
+
+#Creates list of squares of numbers from 1 to 10 and 
+#prints only squares between 30 and 70
+squares = [i ** 2 for i in range(1,11)] 
+print filter(lambda x: x >= 30 and x <= 70, squares)
+"""
+
+
     
     
     
