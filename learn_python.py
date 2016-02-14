@@ -571,14 +571,72 @@ squares = [i ** 2 for i in range(1,11)]
 print filter(lambda x: x >= 30 and x <= 70, squares)
 """
 
+#######################
+###Bitwise operators###
+#######################
+"""
+#int() second parameter. In this case second parameter specifies base first number is in.
+#int() converts string to an integer
+print int("1",2)
+print int("10",2)
+print int("111",2)
+print int("0b100",2)
+print int(bin(5),2)
+print int("0b11001001",2)
+    
+#Shift. 
+#Moves bits to left or right by specified number of positions
+# Left Bit Shift (<<)  
+#0b000001 << 2 == 0b000100 (1 << 2 = 4)
+#0b000101 << 3 == 0b101000 (5 << 3 = 40)       
+# Right Bit Shift (>>)
+#0b0010100 >> 3 == 0b000010 (20 >> 3 = 2)
+#0b0000010 >> 2 == 0b000000 (2 >> 2 = 0)     
+shift_right = 0b1100
+shift_left = 0b1
+shift_right = shift_right >> 2
+shift_left = shift_left << 2
+print bin(shift_right)
+print bin(shift_left)   
+  
+#Bitwise &. 
+#Compares two numbers on a bit level and returns 1 only if both positions equal 1
+#0 & 0 = 0
+#0 & 1 = 0
+#1 & 0 = 0
+#1 & 1 = 1
+#Therefore,
+#0b111 (7) & 0b1010 (10) = 0b10    
+print bin(0b1110 & 0b101)
 
-    
-    
-    
-    
-    
-    
-    
+#Bitwise OR (|)
+#Compares two numbers on a bit level and returns 1 if any of the positions equal 1
+#0 | 0 = 0
+#0 | 1 = 1 
+#1 | 0 = 1
+#1 | 1 = 1
+#Meaning
+#110 (6) | 1010 (10) = 1110 (14) 
+print bin(0b1110 | 0b101)  
+
+#Bitwise XOR (^)
+##Compares two numbers on a bit level and returns 1 if only one position equals 1
+#0 ^ 0 = 0
+#0 ^ 1 = 1
+#1 ^ 0 = 1
+#1 ^ 1 = 0
+#Therefore:
+#111 (7) ^ 1010 (10) = 1101 (13)
+print bin(0b1110 ^ 0b101)    
+
+#Bitwise NOT (~)
+#Flips all of the bits in a single number
+print ~1
+print ~2
+print ~3
+print ~42
+print ~123
+"""
 
 
 
