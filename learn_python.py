@@ -643,7 +643,7 @@ print ~123
 #############
 """
 class Fruit(object):
-    """A class that makes various tasty fruits."""
+    #A class that makes various tasty fruits.
     def __init__(self, name, color, flavor, poisonous):
         self.name = name
         self.color = color
@@ -665,9 +665,31 @@ lemon.description()
 lemon.is_edible()
 """
 
+###############
+### FILE IO ###
+###############
+"""
+#'Open function'. Open file output.txt in 'w' - write mode, 'r' - read mode, 'r+" - r/w mode, 'a' - append mode
+my_file = open("output.txt", "w")
 
+#Writing (File always should be closed when done)
+my_file.write("Yo-ho-ho.\nThis is a new line\n")
+my_file.close()
 
+#Reading
+my_file = open("output.txt", "r")
+print my_file.read()
+my_file.close()
 
+#Reading line by line starting with the forst line
+my_file = open("output.txt", "r")
+print my_file.readline()
+my_file.close()
 
+#Automatically close a file
+with open("output.txt", "w") as textfile:
+	textfile.write("Success!")
 
-
+#Verifies if file is closed. If it it - returns True
+print my_file.closed
+"""
